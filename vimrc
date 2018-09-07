@@ -27,6 +27,7 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'Yggdroot/indentline'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'thinca/vim-localrc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -42,7 +43,6 @@ syntax on
 set number
 set cc=80
 set smartindent
-set autoindent
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -55,6 +55,8 @@ let g:syntastic_check_on_wq = 0
 let g:indent_guides_enable_on_vim_startup = 1
 
 set tabstop=4
+set noexpandtab
+set shiftwidth=4
 
 let g:indentLine_char = '¦'
 let g:indentLine_setColors = 0
