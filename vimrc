@@ -17,17 +17,12 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'crusoexia/vim-monokai'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'justmao945/vim-clang'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'kana/vim-operator-user'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'Yggdroot/indentline'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'thinca/vim-localrc'
+Plugin 'srcery-colors/srcery-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,8 +42,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
@@ -61,16 +56,16 @@ set shiftwidth=4
 let g:indentLine_char = '¦'
 let g:indentLine_setColors = 0
 
-autocmd FileType c,cpp ClangFormatAutoEnable
+" autocmd FileType c,cpp ClangFormatAutoEnable
 
 autocmd Filetype make setlocal noexpandtab
 
 "set list listchars=tab:»·,trail:·
 
+set mouse=a
 map <C-O> :NERDTreeToggle<CR>
 
-colorscheme monokai
-set background=dark
+colorscheme srcery
 
 " per .git vim configs
 " just `git config vim.settings "expandtab sw=4 sts=4"` in a git repository
